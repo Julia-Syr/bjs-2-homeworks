@@ -26,11 +26,11 @@ class AlarmClock {
 
 	getCurrentFormattedTime() {
 		let currentDate = new Date();
-		let hours = currentDate.getHours().toString();
+		let hours = currentDate.getHours();
 		hours = (hours < 10) ? '0' + hours : hours;
-		let minutes = currentDate.getMinutes().toString();
+		let minutes = currentDate.getMinutes();
 		minutes = (minutes < 10) ? '0' + minutes : minutes;
-		return `${hours}:${minutes}`;
+		return (String(hours) + ":" + String(minutes));
 	}
 
 	start() {
